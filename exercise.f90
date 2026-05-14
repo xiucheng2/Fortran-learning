@@ -1,14 +1,25 @@
-program transfer
-  Implicit none
- real ::  T, c ,F, R
+Program judge
+ Implicit none
+ 
+ integer :: score
+ 
+ print *,"score"
+ read *,score
 
-print *, "请输入热力学温度T"
-read *, T
+ If(score>=90.And.score<=100) then
+  	print *, "A"
+	
+ else if(score>=80 .And. score<=89) then
+	print *,"B"
 
-c=T-273.5
-F=5*T/9-459.67
-R=1.8*T
+ else if(score>=70 .And. score<=79) then
+   	print *,"C"
 
-print *," 摄氏温度等于",c,"华氏温度等于",F, "兰氏温度等于",R
+ else if(score>=60 .And. score<=69) then
+ 	print *,"D"
 
-end
+ else if(score<60) then
+	print *,"E"
+end if
+
+end program
